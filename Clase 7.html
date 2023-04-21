@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos para paginas web</title>
+    <!-- Fuentes de google -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire-animation|neon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Rubik Pixels|Tangerine">
+    <!-- Podemos darle estilo a nuestro sitio web en un documento css generalmente llamado style.css, esto permite reciclar los estilos y aplicarlo a todas nuestras paginas dentro del sitio web.
+    NOTA: Utilizado para cambios generales y unificar el sitio web -->
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <!-- Tambien podemos darle estilo a nuestra pagina, mediante una etiqueta de estilos "style" dentro de la cabecera del sitio
+    NOTA: cambios especificos a una pagina -->
+</head>
+
+<body>
+    <nav>
+        <!-- prueba para github -->
+        <h1 >Cascading Style Sheets</h1>
+        <ul>
+            <li class="navegacion"><a href="#seccion1">Seccion 1:PRINCIPIOS BASICOS DE SELECTORES</a></li>
+            <li class="navegacion"><a href="#seccion2">Seccion 2:ESTILOS DE TEXTO</a></li>
+            <li class="navegacion"><a href="#seccion3">Seccion 3:ESTILOS DE IMAGEN</a></li>
+            <li class="navegacion"><a href="#seccion4">Seccion 4:</a></li>
+            <li class="navegacion"><a href="#seccion5">Seccion 5:</a></li>
+            <li class="navegacion"><a href="#seccion6">Seccion 6:</a></li>
+            <li class="navegacion"><a href="#seccion7">Seccion 7:</a></li>
+        </ul>
+    </nav>
+    <!-- Tambien podemos agregar estilos a nuestras estiquetas
+    NOTA: cambios muy especificos -->
+    <hr>
+    <p style="font-size: small;"></p>
+    <hr>
+    <!-- Selectores -->
+    <section id="seccion1">
+        <h1>PRINCIPIOS BASICOS DE SELECTORES</h1>
+        <p>A todos los parrafos</p>
+        <p class="varios">parrafo 1 CON CLASES</p>
+        <p class="varios">parrafo 2 CON CLASES</p>
+        <p class="varios">parrafo 3 CON CLASES</p>
+        <p id="unico"  class="font-effect-neon">parrafo 4 CON ID</p>
+    </section>
+    <!-- ESTILOS Y DECORACION DE TEXTO   -->
+    <section id="seccion2">
+        <h1>ESTILOS DE TEXTO</h1>
+        <p class="varios subrayado">parrafo 5</p>
+        <p class="varios encimatexto">parrafo 6</p>
+        <p class="varios tachado">parrafo 7</p>
+        <p class="varios minusculas">PARRAFO 8</p>
+        <p class="varios mayusculas">parrafo 9</p>
+        <p class="varios capitalizacion">parrafo numero 10</p>
+    </section>
+    <section id="seccion3">
+        <h1>ESTILOS DE IMAGEN</h1>
+        <img class="efectos" src="img/gatitos.jpg" alt="gatitos">
+    </section>
+    <!-- MODELO CAJA -->
+    <section id="seccion4">
+        <h1>MODELO CAJA</h1>
+        <div id="padre">
+            <div id="hijo">
+                <p id="contenido">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias libero voluptate
+                    deleniti mollitia
+                    cupiditate quos sunt, eaque ipsum illum nobis debitis incidunt quo necessitatibus nisi nulla
+                    repudiandae. Ducimus, dicta quod!</p>
+            </div>
+        </div>
+    </section>
+    <!-- SELECTORES AVANZADOS -->
+    <section id="seccion5">
+        <h1>SELECTORES AVANZADOS</h1>
+        <div class="hijos">
+            <h2>SELECTORES DE HIJOS</h2>
+            <h4>Selectores de hijos directos</h4>
+            <ul class="hijos-directos">
+                <!-- Los hijos directos son li -->
+                <li><b>Primavera</b></li>
+                <li><b>Verano</b></li>
+                <li><b>Otoño</b></li>
+                <li><b>Inverno</b></li>
+            </ul>
+            <h4>Selectores de hijos descendientes</h4>
+            <ul class="hijos-descendientes">
+                <li><b>Primavera</b></li>
+                <li><b>Verano</b></li>
+                <li><b>Otoño</b></li>
+                <li><b>Inverno</b></li>
+            </ul>
+        </div>
+        <div class="hermanos">
+            <h2>Selectores de hermanos</h2>
+            <h4>Selectores de hermanos (general)</h4>
+            <ul>
+                <li><b>Primavera</b></li>
+                <li class="hermanos-general"><b>Verano</b></li>
+                <li><b>Otoño</b></li>
+                <li><b>Inverno</b></li>
+            </ul>
+            <h4>Selector de hermanos adyacente</h4>
+            <ul>
+                <li><b>Primavera</b></li>
+                <li class="hermanos-adyacentes"><b>Verano</b></li>
+                <li><b>Otoño</b></li>
+                <li><b>Inverno</b></li>
+            </ul>
+        </div>
+        <div class="selectores">
+            <h3>Selectores de atributos y universales</h3>
+            <nav class="selectores-atributos">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li>
+                        <a class="menu-item cursos button" href="https://www.w3schools.com/" target="_blank">Cursos</a>
+                    </li>
+                    <li><a href="https://www.w3schools.com/" target="_blank">Blog</a></li>
+                    <li>
+                        <a class="menu-item notas button" href="https://www.w3schools.com/" target="_blank">Notas</a>
+                    </li>
+                    <li><a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank">CV</a></li>
+                    <li><a href="" target="_blank">Ahora</a></li>
+                </ul>
+            </nav>
+            <h3>Selector universal</h3>
+            <ul class="selector-universal">
+                <li><b>Primavera</b></li>
+                <li><b>Verano</b></li>
+                <li><b>Otoño</b></li>
+                <li><b>Inverno</b></li>
+            </ul>
+        </div>
+        <div class="agrupacion">
+            <h2>Agrupacion de selectores</h2>
+            <form class="form-agrupar-selectores">
+                <input type="text" name="nombre" placeholder="Escribe tu nombre" />
+                <input type="email" name="correo" placeholder="Escribe tu correo" />
+                <textarea name="comentarios" placeholder="Escribe tus comentarios" cols="30" rows="10"></textarea>
+                <input type="submit" />
+            </form>
+        </div>
+    </section>
+    <section id="seccion6">
+        <h1>PSEUDOCLASES</h1>
+        <h4>DE TIPO</h4>
+        <form class="form-pseudoclases">
+            <input type="text" name="nombre" placeholder="Escribe tu nombre" required />
+            <br />
+            <input type="text" name="apellido" placeholder="Escribe su apellido" />
+            <br />
+            <input type="email" name="correo" placeholder="Escribe tu correo" required />
+            <br />
+            <input type="submit" disabled />
+            <input type="submit" />
+        </form>
+        <nav class="menu-pseudoclases">
+            <a href="#seccion1">Seccion 1</a>
+            <a href="#seccion2">Seccion 2</a>
+            <a href="#seccion3">Seccion 3</a>
+            <a href="#seccion4">Seccion 4</a>
+        </nav>
+        <p class="p-pseudoclases">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio sunt
+            sapiente, quas, blanditiis ipsam nihil iusto perspiciatis impedit
+            dolores cupiditate ducimus. Ipsa asperiores, doloremque quibusdam
+            voluptatum incidunt magni laboriosam consectetur.
+        </p>
+        <hr>
+        <h4>DE POSICION</h4>
+        <table class="tabla-pseudoclases">
+            <tr>
+                <td>CELDA</td>
+                <td>CELDA</td>
+                <td>CELDA</td>
+            </tr>
+            <tr>
+                <td>CELDA</td>
+                <td>CELDA</td>
+                <td>CELDA</td>
+            </tr>
+            <tr>
+                <td>CELDA</td>
+                <td>CELDA</td>
+                <td>CELDA</td>
+            </tr>
+            <tr>
+                <td>CELDA</td>
+                <td>CELDA</td>
+                <td>CELDA</td>
+            </tr>
+            <tr>
+                <td>CELDA</td>
+                <td>CELDA</td>
+                <td>CELDA</td>
+            </tr>
+            <tr>
+                <td>CELDA</td>
+                <td>CELDA</td>
+                <td>CELDA</td>
+            </tr>
+            <tr>
+                <td>CELDA</td>
+                <td>CELDA</td>
+                <td>CELDA</td>
+            </tr>
+            <tr>
+                <td>CELDA</td>
+                <td>CELDA</td>
+                <td>CELDA</td>
+            </tr>
+        </table>
+        <hr>
+        <h4>DE NEGACION</h4>
+        <article class="articulo-pseudoclases">
+            <p>ejemplo</p>
+            <div>del</div>
+            <h1>funcionamiento</h1>
+            <p>de</p>
+            <h2>negacion</h2>
+        </article>
+        <hr>
+        <h4>PSEUDOELEMENTOS</h4>
+        <article id="pseudoelementos">
+            <h2>Pseudoelementos</h2>
+            <p>
+                <span class="nombre-item">Curso backend</span><br>
+                <span class="precio-item">1000000</span>
+            </p>
+            <p class="p-pseudoelementos">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora dicta
+                placeat aut minus tenetur consequatur alias ullam itaque sint,
+                voluptatem, fugit, inventore magnam non illum nobis veritatis eos ipsa?
+                Vitae?
+            </p>
+            <input type="text" class="input-pseudoelementos" placeholder="Escribe tu nombre" />
+        </article>
+    </section>
+    <section class="seccion7">
+        <article id="algoritmo-css">
+            <h2>Algoritmo de CSS</h2>
+            <p>
+                El algoritmo de CSS es la forma en que el navegador aplica los estilos
+                al documento HTML. Es vital entender este concepto para que entiendas
+                como se aplican y en algunas ocaciones se sobreescriben las reglas CSS
+            </p>
+            <ol>
+                <li>La cáscada</li>
+                <li>La espeficidad</li>
+                <li>La herencia</li>
+            </ol>
+            <h3>La cascada</h3>
+            <p>
+                Mecanismo que tiene el navegador web para ir aplicando los estilos y
+                toma en cuenta 3 aspectos en general en el siguiente orden, como en el
+                modelo cascada:
+            </p>
+            <ol>
+                <li><i>El origen del código</i></li>
+                <ol type="a">
+                    <li>
+                        <b>User Agent:</b> estilos por defecto que aplica el navegador a las
+                        etiquetas
+                    </li>
+                    <li>
+                        <b>Personalizaciones del usuario:</b> Personalizaciones que le
+                        hacemos al sistema operativo por ejemplo el modo claro o el modo
+                        oscuro
+                    </li>
+                    <li>
+                        <b>Código CSS:</b>Estilos de autor, es decir el codigo css que
+                        escribe el desarrollador
+                    </li>
+                </ol>
+                <li><i>La Especifidad del selector</i></li>
+                <li><i>Orden de aparición</i>: Orden en el que aparecen los estilos</li>
+            </ol>
+            <h3>Especifidad</h3>
+            <p>
+                Peso especifico de la propiedad, si un selector tiene mayor peso que
+                otro, no toma el orden de cascada. El peso de la propiedad aparece
+                cuando se pone el cursor encima de la regla css.
+                <i>Selector Specificity</i>
+            </p>
+            <img src="img/especificidad.png" />
+            <p>El peso se calcula de la siguiente forma</p>
+            <table border="1px">
+                <tr>
+                    <th>Selector</th>
+                    <th>Peso</th>
+                </tr>
+                <tr>
+                    <td>Etiquetas y pseudoelementos</td>
+                    <td>0,0,0,1</td>
+                </tr>
+                <tr>
+                    <td>Clases, atributos y pseudoclases</td>
+                    <td>0,0,1,0</td>
+                </tr>
+                <tr>
+                    <td>Identificadores</td>
+                    <td>0,1,0,0</td>
+                </tr>
+                <tr>
+                    <!-- Los estilos en linea son los estilos que se ponen dentro de un elemento HTML -->
+                    <td>Estilos de linea</td>
+                    <td>1,0,0,0</td>
+                </tr>
+                <tr>
+                    <td>!Important</td>
+                    <td>Rompe la especificidad</td>
+                </tr>
+            </table>
+            <blockquote id="cita-marco" class="cita-marco">
+                Sé tolerante con los demas y estricto contigo mismo -
+                <cite>Marco Aurelio</cite>
+            </blockquote>
+            <h3>Herencia</h3>
+            <p>
+                Es la capacidad de un selector de obtener los valores de sus ancestros
+                (padres, abuelos,...) más cercanos, para aplicarla se usa el valor
+                inherit, si queremos evitarla podemos asignar otro valor o inicializar
+                la propiedad en cuestion con el valor initial. Hay propiedades que no se
+                heredan como el borde, fondo. Las que si o si se heredan son las que
+                tiene que ver con la tipografia
+            </p>
+
+            <span class="herencia-span">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat est
+                dolores animi perspiciatis voluptatum quidem odit eligendi
+                exercitationem voluptas ut, accusantium earum dignissimos porro, totam
+                rerum corporis nesciunt cupiditate provident?
+                <span class="herencia-hijo">Elemento hijo</span>
+            </span>
+            <br />
+        </article>
+    </section>
+
+</body>
+
+</html>
