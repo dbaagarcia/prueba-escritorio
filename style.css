@@ -1,0 +1,447 @@
+body {
+    /* important prioriza la aplicacion del estilo */
+    background-color: antiquewhite !important;
+    border: 1px solid black;
+}
+
+section {
+    border: 2px solid chocolate;
+}
+
+/* -----------------------SELECTORES BASICOS----------------------- */
+p {
+    color: black;
+}
+
+
+.varios {
+    color: brown;
+    font-family: "Sofia";
+}
+
+#unico {
+    color: blueviolet;
+    font-family: "Sofia";
+    font-size: 40px;
+    text-shadow: 4px 4px 4px #aaa;
+}
+
+/* -----------------------ESTILOS DE TEXTO----------------------- */
+.subrayado {
+    text-decoration: underline;
+}
+
+.encimatexto {
+    /* Linea estilo color */
+    text-decoration: overline wavy pink;
+}
+
+.tachado {
+    text-decoration: line-through;
+}
+
+.minusculas {
+    text-transform: lowercase;
+}
+
+.mayusculas {
+    text-transform: uppercase;
+}
+
+.capitalizacion {
+    text-transform: capitalize;
+}
+
+/* -----------------------ESTILOS DE IMAGEN----------------------- */
+img {
+    width: 200px;
+    height: 200px;
+    /* Por defecto, ajusta la imagen al tamaño elegido */
+    object-fit: fill;
+    /* Mantiene la relacion de aspecto, pero redimenciona la imagen al tamaño elegido */
+    object-fit: contain;
+    /* Escala la imagen a menos tamaño que el contenedor */
+    object-fit: scale-down;
+    /* La imagen mantiene su relación de aspecto y llena la dimensión dada. La imagen se recortará para que quepa */
+    object-fit: cover;
+    /* No redimenciona la imagen */
+    object-fit: none;
+}
+
+.efectos {
+    /* Desenfoque */
+    filter: blur(5px);
+    /* Iluminado */
+    filter: brightness(50%);
+    /* contraste */
+    filter: contrast(25%);
+    /* Escala de grises */
+    filter: grayscale(100%);
+    /* Rotacion de colores */
+    filter: hue-rotate(240deg);
+    /* Saturacion */
+    filter: saturate(150%);
+    /* Invertir colores */
+    filter: invert(100%);
+    /* Opacidad */
+    filter: opacity(10%);
+    /* Sepia */
+    filter: sepia(100%);
+    /* radio */
+    border-radius: 100%;
+
+}
+
+/* -----------------------MODELO CAJA----------------------- */
+#padre {
+    background-color: lightblue;
+    width: 700px;
+
+}
+
+#hijo {
+    background-color: blueviolet;
+    width: 100%;
+    /* PADDING */
+    /* Especifico */
+    max-width: 300px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    /* Aplica a todos */
+    padding: 20px;
+    /* (arriba-abajo) (derecha-izquierda) */
+    padding: 10px 40px;
+    /*  Cada uno (arriba izquierda abajo derecha ) */
+    padding: 5px 6px 7px 8px;
+    /* IZQUIERDA DERECHA */
+    padding-inline: 10px;
+    padding-inline-start: 30px;
+    padding-inline-end: 35px;
+    /* ARRIBA ABAJO */
+    padding-block: 20px;
+    /* BORDE */
+    /* color */
+    border-color: goldenrod;
+    /* estilo */
+    border-style: dashed;
+    /* ancho */
+    border-width: 0.5em;
+    /* radio */
+    border-radius: 15px 50px 30px 5px;
+    /* todos */
+    border: 10px double greenyellow;
+    /* especificos */
+    border-block-start-color: blue;
+    /* MARGEN */
+    margin: 20px;
+    margin: auto;
+
+}
+
+#contenido {
+    margin: 0%;
+    /* Alineacion */
+    text-align: center;
+    text-align: left;
+    text-align: right;
+    text-align: start;
+    text-align: end;
+    text-align: justify;
+    /* Identado */
+    text-indent: 50px;
+    /* Direccion */
+    direction: rtl;
+    /* Espaciado de palabras */
+    word-spacing: 10px;
+    /* Espaciado de letras */
+    letter-spacing: 0.5px;
+    /* Linea de espaciado */
+    line-height: 2.0;
+}
+
+/* -----------------------SELECTORES AVANZADOS----------------------- */
+div{
+    border: 3px double black;
+}
+/* Para seleccionar los hijos directos se utiliza el simbolo de mayor que y el hijo directo que es li en este caso */
+.hijos-directos>li {
+    background-color: rgba(251, 255, 0, 0.418);
+    /* Afecta a los hijos dentro de li */
+    color: blueviolet;
+}
+
+/* li es un elemento de bloque que ocupa todo el espacio */
+.hijos-directos>li>b {
+    font-weight: 500;
+    color: black;
+}
+
+/* A los hijos descendientes de la clase sin importar si son directos o no le aplica los estilos, solo es necesario utilizar el espacio */
+.hijos-descendientes b {
+    color: blue;
+}
+
+/* Selector de hermanos en general, le aplica el estilo unicamnete a los hermanos (que estan en el mismo nivel) que esta por debajo de la etiqueta class*/
+.hermanos-general~li {
+    background-color: #ff0909;
+}
+
+/* Le aplica los estilos unicameNte al elemento que este por debajo del elemento que lleva la clase y que esten en el mismo nivel*/
+.hermanos-adyacentes+li {
+    background-color: #ff0909;
+}
+
+/* Permiten agregar estilos teniendo en cuenta los atributos de una etiqueta*/
+.selectores-atributos a[href] {
+    color: #ff8c09;
+    /* text decoration le quita el estilo a los enlaces */
+    text-decoration: none;
+}
+
+.selectores-atributos a[target="_blank"] {
+    font-weight: bold;
+}
+
+/* El comodin * busca todos los atributos que contengan la palabra a la que esta igualdado  */
+.selectores-atributos a[href*="w3schools"] {
+    font-size: 24px;
+}
+
+/* El comodin ^ busca los atributos que comiencen con la palabra a la que se le esta igualando */
+.selectores-atributos a[href^="#"] {
+    background-color: lightpink;
+    color: purple;
+}
+
+/* El comodin $ busca todos los atributos que terminen con lo que esta igualado */
+.selectores-atributos a[href$=".com/"] {
+    background-color: rgb(93, 96, 99);
+}
+
+/* El comodin ~  aplica el estilo si contiene la palabra si esta en una lista de palabras separadas por espacios */
+.selectores-atributos a[class~="cursos"] {
+    background-color: #093aff;
+}
+
+/* El comodin | busca las palabras que esten igualdas y que despues del texto pueda venir un guion medio y esta entre una lista de palabras separadas por espacio */
+.selectores-atributos a[class|="menu"] {
+    /* Estilo de la letra */
+    font-style: italic;
+}
+
+/* El selector universal le aplica los estilos a todos los elementos HTML que se tienen dentro del documento*/
+
+* {
+    /* Font-family cambia la tipografia */
+    font-family: sans-serif;
+}
+
+/* A todos los elementos dentro de la clase les aplica el estilo */
+
+.selector-universal * {
+    font-size: 24px;
+    color: darkorchid;
+}
+/* -----------------------AGRUPACION DE SELECTORES----------------------- */
+/* Agrupar selectores, se hace con la coma */
+.form-agrupar-selectores input[type="text"],
+.form-agrupar-selectores input[type="email"],
+.form-agrupar-selectores textarea{
+    border-color: darkolivegreen;
+    border-width: 5px;
+    border-style: dashed;
+    background-color: lightgreen;
+    font-size: 20px;
+    /* Pone la etiqueta de tipo bloque es decir que ocupe todo el espacio */
+    display: block;
+    width: 300px;
+}
+
+/* -----------------------PSEUDOCLASES DE TIPO----------------------- */
+/* Las pseudoclases dan estilos dependiendo el contexto, la posicion o el estado que tenga un elemento HTML */
+/* Las pseudoclases se distinguen porque tienen : */
+/* A todos los elementos que esten dentro de form-pseudoclases y sean required*/
+.form-pseudoclases *:required {
+    background-color: #fbff09;
+}
+
+/* Hacen que el sitio sea interactivo, cuando el valor es valido se pone en verde */
+.form-pseudoclases *:valid {
+    border-color: #11ff09;
+}
+
+/* Cuanco el estado cambia a invalido se pone en rojo */
+.form-pseudoclases *:invalid {
+    border-color: #ff0909;
+}
+
+/* Estado deshabilitado */
+.form-pseudoclases *:disabled {
+    background-color: grey;
+}
+
+/* El foco es cuando el elemento tiene el cursor */
+.form-pseudoclases *:focus {
+    background-color: #ff8c09;
+}
+
+/* Orden para estados de los elementos a
+:link: le da el estilo predeterminado a los enlaces
+:active: Le da el estilos a los enlaces activos
+:visited: le da el estilo a los enlaces que fueron visitados
+:hover: le da el estilo cuando pasa el cursos */
+
+/* Estado de enlace visitado, tiene que ir arriba de hover para que no quite los estilos del hover */
+.menu-pseudoclases a:visited {
+    color: #11ff09;
+}
+
+/* El estado hover es cuando pasa el cursos por encima del elemento */
+.menu-pseudoclases a:hover {
+    font-size: 24px;
+    color: #ff8c09;
+}
+
+/* No solo sirve para elementos interactivos sino par cualquier tipo de elemento html */
+.p-pseudoclases:hover {
+    background-color: #ad7cdb;
+}
+
+/* Cuando se encuentra en el id temario-css en el url cambia el color de la seccion a naranja */
+#seccion4:target {
+    background-color: #ff8c09;
+}
+
+/* -----------------------PSEUDOCLASES DE POSICION----------------------- */
+
+td {
+    border: 2px solid black;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+/* Le aplica el estilo al primer hijo del elemento padre que es la clase y que aparte sea de tipo li */
+.tabla-pseudoclases tr:first-child {
+    color: #093aff;
+}
+
+/* Le aplica el estilo al ultimo hijo del elemento padre que es la clase y que aparte sea de tipo li */
+.lista-pseudoclases li:last-child {
+    color: steelblue;
+}
+
+/* Le aplica el estilo al n hijo del elemento*/
+.tabla-pseudoclases tr:nth-child(1) {
+    background-color: blanchedalmond;
+}
+
+/* De 2 en 2 va aplicando el estilo */
+.tabla-pseudoclases tr:nth-child(2n) {
+    font-size: 24px;
+}
+
+/* Los pares */
+.tabla-pseudoclases tr:nth-child(even) {
+    background-color: chocolate;
+}
+
+/* Los impares */
+.tabla-pseudoclases tr:nth-child(odd) {
+    background-color: lightsalmon;
+}
+
+/* Ultimos 4 */
+.tabla-pseudoclases tr:nth-child(n+4) {
+    background-color: aqua;
+}
+
+/* Primeros 4 */
+.tabla-pseudoclases tr:nth-child(-n+4) {
+    background-color: aquamarine;
+}
+
+/* Entre el 3ro y el sexto */
+.tabla-pseudoclases tr:nth-child(n+3):nth-child(-n+6) {
+    background-color: cornflowerblue;
+}
+
+/* Primer elemento del tipo p  */
+.tabla-pseudoclases td:first-of-type {
+    background-color: #db65bc;
+}
+
+/* En type aplican las mismas caracteristicas de child */
+.tabla-pseudoclases td:last-of-type {
+    background-color: #e9a95f;
+}
+
+/* -----------------------PSEUDOCLASES DE NEGACION----------------------- */
+/* Todos menos p y div*/
+.articulo-pseudoclases *:not(p, div) {
+    background-color: #334230;
+}
+
+/* -----------------------PSEUDOELEMENTOS----------------------- */
+/* Agrega contenido antes de la clase*/
+.nombre-item::before {
+    content: "Nombre:";
+}
+
+.precio-item::before {
+    content: "$";
+    font-weight: bold;
+}
+
+/* Agrega contenido despues de la clase */
+.precio-item::after {
+    content: " COP";
+}
+
+.p-pseudoelementos::first-letter {
+    font-weight: bold;
+    font-size: 34px;
+}
+
+/* Los elementos que selecciono se ponen en rojo */
+.p-pseudoelementos::selection {
+    color: darkslateblue;
+    background-color: #ad7cdb;
+}
+
+.input-pseudoelementos::placeholder {
+    color: #ff09bd;
+}
+/* -----------------------ESPECIFICIDAD CSS----------------------- */
+
+/* Tiene un peso de 100 por lo que le pone prioridad sobre la regla de etiqueta y de clase */
+#cita-marco{
+    background-color: #09deff;
+}
+
+/* Tiene un peso de 1 */
+blockquote{
+    background-color: #2aff09;
+}
+/* Tiene un peso de 10 por lo que le pone más prioridad al estilo con clase que con etiqueta */
+/* Por cascada deberia quedar en fucsia pero como el peso del id es mayor se queda en azul */
+.cita-marco{
+    background-color: #ff09bd;
+}
+
+.herencia-span{
+    font-size: 24px;
+    background-color: #fbff09;
+}
+
+.herencia-hijo{
+    /* El elemento hijo tiene sus propiedades */
+    background-color: #ff0909;
+    /* Vuelve al tamaño por defecto sin importar la herencia */
+    font-size: initial;
+    /* Hereda el fondo del pabre el cual es amarillo */
+    background-color: inherit;
+}
